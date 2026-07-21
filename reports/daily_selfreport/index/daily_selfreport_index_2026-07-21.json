@@ -4,6 +4,15 @@
   "timezone": "America/New_York",
   "repo": "hedgineer-bizops",
   "entries": {
+    "asarakuz@hedgineer.io": {
+      "target_user": "asarakuz@hedgineer.io",
+      "engineer_slug": "asarakuz",
+      "markdown_path": "reports/daily_selfreport/daily_selfreport_asarakuz_2026-07-21.md",
+      "html_path": "reports/daily_selfreport/daily_selfreport_asarakuz_2026-07-21.html",
+      "generated_at": "2026-07-21T17:10:00-04:00",
+      "window_start": "2026-07-20T17:04:43-04:00",
+      "window_end": "2026-07-21T17:04:43-04:00"
+    },
     "btsymbal@hedgineer.io": {
       "target_user": "btsymbal@hedgineer.io",
       "engineer_slug": "btsymbal",
