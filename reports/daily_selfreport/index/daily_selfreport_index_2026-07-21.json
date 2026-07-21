@@ -1,0 +1,17 @@
+{
+  "schema": "hedgineer.daily-self-report-index/v1",
+  "report_date": "2026-07-21",
+  "timezone": "America/New_York",
+  "repo": "hedgineer-bizops",
+  "entries": {
+    "btsymbal@hedgineer.io": {
+      "target_user": "btsymbal@hedgineer.io",
+      "engineer_slug": "btsymbal",
+      "markdown_path": "reports/daily_selfreport/daily_selfreport_btsymbal_2026-07-21.md",
+      "html_path": "reports/daily_selfreport/daily_selfreport_btsymbal_2026-07-21.html",
+      "generated_at": "2026-07-21T17:06:20-04:00",
+      "window_start": "2026-07-20T17:01:12-04:00",
+      "window_end": "2026-07-21T17:01:12-04:00"
+    }
+  }
+}
