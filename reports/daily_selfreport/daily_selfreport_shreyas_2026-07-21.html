@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Self-Report — Shreyas Aditya — 2026-07-21</title>
+<style>
+  :root{
+    --bg:#0f0f0e; --surface:#1a1a19; --surface2:#232321;
+    --text:#f2f1ec; --text2:#c3c2b7; --muted:#8a8980;
+    --accent:#e0713f; --accent-bg:#2a1a12; --border:#2c2c2a; --radius:8px;
+    --ok:#6fae6a; --partial:#e0b23f; --skip:#c3554a;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--text); font-family:var(--font); line-height:1.6; padding:28px 20px 48px;}
+  .wrap{max-width:920px; margin:0 auto;}
+  h1{font-size:22px; font-weight:500; margin:0 0 2px;}
+  h2{font-size:16px; font-weight:500; margin:28px 0 10px; border-top:0.5px solid var(--border); padding-top:18px;}
+  .sub{color:var(--text2); font-size:13px; margin:0 0 18px;}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px;}
+  .chip{background:var(--surface); border:0.5px solid var(--border); border-radius:var(--radius); padding:6px 10px; font-size:12px; color:var(--text2); display:flex; gap:6px; align-items:center;}
+  .chip b{color:var(--text); font-weight:500;}
+  .dot{width:8px; height:8px; border-radius:50%; display:inline-block;}
+  .dot.ok{background:var(--ok);} .dot.partial{background:var(--partial);} .dot.skip{background:var(--skip);}
+  table{width:100%; border-collapse:collapse; font-size:13px; margin-bottom:10px;}
+  th{text-align:left; color:var(--muted); font-size:11px; font-weight:500; padding:6px 10px; border-bottom:0.5px solid var(--border);}
+  td{padding:8px 10px; border-bottom:0.5px solid var(--border); vertical-align:top; color:var(--text2);}
+  td.strong{color:var(--text);}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .pill{background:var(--accent-bg); color:var(--accent); border-radius:var(--radius); padding:1px 8px; font-weight:500; font-size:12px; white-space:nowrap;}
+  ul{margin:6px 0 14px; padding-left:20px; color:var(--text2); font-size:13px;}
+  li{margin-bottom:6px;}
+  .note{font-size:12px; color:var(--muted); margin-top:4px;}
+  .card{background:var(--surface); border:0.5px solid var(--border); border-radius:var(--radius); padding:14px 16px; margin-bottom:12px;}
+  footer{margin-top:30px; font-size:12px; color:var(--muted); line-height:1.6; border-top:0.5px solid var(--border); padding-top:16px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Daily Self-Report — Shreyas Aditya</h1>
+  <p class="sub">shreyas@hedgineer.io &middot; window: 2026-07-20 17:00 ET &rarr; 2026-07-21 17:00 ET (trailing 24h, Tuesday) &middot; generated 2026-07-21 17:02 ET</p>
+
+  <div class="chips">
+    <span class="chip"><span class="dot skip"></span>Usage Analytics <b>SKIPPED</b></span>
+    <span class="chip"><span class="dot partial"></span>Commits / hedgineer-core+bizops <b>PARTIAL</b></span>
+    <span class="chip"><span class="dot ok"></span>Linear <b>OK</b></span>
+    <span class="chip"><span class="dot partial"></span>Slack / Fireflies <b>PARTIAL</b></span>
+  </div>
+
+  <div class="card note">
+    Usage Analytics: no observability/Usage-Analytics MCP tool available this run — idle-stripped hours not inferred or fabricated.
+    Commits: GitHub repo access unavailable this run; used Linear <code>list_diffs</code> PR-metadata proxy (authorship often null).
+    Slack/Fireflies: public-channel search only, no private-channel consent obtained this run; two in-window Fireflies transcripts read in full.
+  </div>
+
+  <h2>Active-time breakdown</h2>
+  <p style="color:var(--text2); font-size:13px;">
+    <b style="color:var(--text)">Usage Analytics is SKIPPED this run</b> — no idle-stripped active hours, session counts, or work-type buckets available.
+    This is an unmeasured gap, not a zero. Active-hour data, when available, is a proxy for attention — never a timesheet or cross-engineer ranking.
+  </p>
+  <p style="color:var(--text2); font-size:13px;">
+    Best-effort substitute (not a replacement for sessions): Linear-thread engagement shows Shreyas directly diagnosing two issues live —
+    5 root-cause/design comments on <b style="color:var(--text)">TRIAGE-64</b> (2026-07-20 23:16–23:42 ET) and the explicit-claim comment on
+    <b style="color:var(--text)">TRIAGE-63</b> ("I'm addressing it. The fix is hacky.") at 22:07 ET.
+  </p>
+
+  <h2>What they did</h2>
+  <table>
+    <tr><th>Ticket</th><th>What happened</th><th>Confidence / join key</th></tr>
+    <tr>
+      <td class="strong"><a href="https://linear.app/hedgineer/issue/TRIAGE-63/cowork-hides-mcp-server-names-in-tool-calls-causing-confusion-across">TRIAGE-63</a><br><span class="note">Cowork hides MCP server names</span></td>
+      <td>Created 22:07 ET; explicit claim in-thread, root-caused it, self-described "hacky" fix in progress. Set In Progress same moment.</td>
+      <td>High — explicit claim (Rule 0)</td>
+    </tr>
+    <tr>
+      <td class="strong"><a href="https://linear.app/hedgineer/issue/TRIAGE-64/changing-skill-name-resets-skill-use-count">TRIAGE-64</a><br><span class="note">Skill rename resets use count</span></td>
+      <td>Created 23:42 ET, assigned to Shreyas. He diagnosed root cause live ("no skill-lineage tracking" &rarr; "maintain lineage in Postgres"), kept debating design with Edward Berman / Michael Watson / Manaswi Amalanadhan into 7/21 AM. Still Backlog/unstarted, no decision yet.</td>
+      <td>High — explicit diagnosis in comments</td>
+    </tr>
+    <tr>
+      <td class="strong"><a href="https://linear.app/hedgineer/issue/LUM-101/dealcloud-v3-write-tools">LUM-101</a><br><span class="note">DealCloud V3 Write Tools</span></td>
+      <td>Created 00:36 ET by Jeffrey Chan, assigned to Shreyas. Backlog — no activity yet beyond assignment.</td>
+      <td>— (new assignment only)</td>
+    </tr>
+  </table>
+  <p class="note">No commit/PR confirmed landed for Shreyas this window (code leg PARTIAL, proxy-only — absence of proxy evidence ≠ confirmed absence of work). No GHOST-DONE tickets this window.</p>
+
+  <h2>What they're working on</h2>
+  <ul>
+    <li><b style="color:var(--text)"><a href="https://linear.app/hedgineer/issue/TRIAGE-63">TRIAGE-63</a></b> (In Progress, claimed today) — fixing the Cowork MCP-server-name-hiding bug; "hacky" interim fix, no commit confirmed yet → <span class="pill">effort-no-output</span></li>
+    <li><b style="color:var(--text)"><a href="https://linear.app/hedgineer/issue/TRIAGE-64">TRIAGE-64</a></b>, <b style="color:var(--text)"><a href="https://linear.app/hedgineer/issue/LUM-101">LUM-101</a></b> — newly assigned today, Backlog/unstarted</li>
+  </ul>
+  <p style="color:var(--text2); font-size:13px;">Broader active commitment set (assigned Todo/In Progress regardless of window — large open Linear load, consistent with data-platform/OTEL/usage-cost-reconciliation focus). In-Progress items not touched this window:</p>
+  <table>
+    <tr><th>Ticket</th><th>Title</th><th>Last touch</th><th>Age (biz days)</th></tr>
+    <tr><td class="strong"><a href="https://linear.app/hedgineer/issue/TRIAGE-48">TRIAGE-48</a></td><td>No cost estimate for Office agents</td><td>2026-07-20</td><td>1</td></tr>
+    <tr><td class="strong"><a href="https://linear.app/hedgineer/issue/PLATFRM-6080">PLATFRM-6080</a></td><td>Observability cost dashboard under-reports Claude spend</td><td>2026-07-17</td><td>2</td></tr>
+    <tr><td class="strong"><a href="https://linear.app/hedgineer/issue/LUM-97">LUM-97</a></td><td>Add LuminarX investment team as DealCloud MCP admins</td><td>2026-07-15</td><td>4</td></tr>
+    <tr><td class="strong"><a href="https://linear.app/hedgineer/issue/PLATFRM-6054">PLATFRM-6054</a></td><td>tf-databricks-account: CI deploy SP as metastore admin</td><td>2026-07-15</td><td>4</td></tr>
+    <tr><td class="strong"><a href="https://linear.app/hedgineer/issue/PLATFRM-6056">PLATFRM-6056</a></td><td>Bump ai-observability-platform-pipeline bundle pin to v0.2.0</td><td>2026-07-02</td><td>~13 — see Blockers (STALE)</td></tr>
+  </table>
+  <p class="note">Plus a sizeable Backlog/Todo queue beyond this table (data-platform, observability, client-deployment) not touched this window — omitted here for readability; full list via Linear (assignee: shreyas@hedgineer.io).</p>
+
+  <h2>Blockers</h2>
+  <ul>
+    <li>Session-level blocked signal: <b style="color:var(--text)">SKIPPED</b> — Usage Analytics unavailable this run.</li>
+    <li>Comms sweep: today's Fireflies "Eng Stand Up" (15:00 UTC) + "Product &amp; Engineering Review" (17:30 UTC, silent/no summary) transcripts read in full, plus a Slack public-channel keyword sweep. No explicit blocker statement from Shreyas surfaced in-window. Today's standup covered a company-wide RTW production data-freshness incident (expired Azure secret) — not raised as Shreyas's blocker, no action item for him.</li>
+    <li><span class="pill" style="background:#3a1f1c; color:var(--skip)">STALE</span> <b style="color:var(--text)"><a href="https://linear.app/hedgineer/issue/PLATFRM-6056">PLATFRM-6056</a></b> — In Progress since 2026-07-02, no Linear update since (~13 business days). Confidence caveat: Usage Analytics SKIPPED + code leg PARTIAL this run, so undetected activity elsewhere can't be fully ruled out.</li>
+    <li>Aging (not yet STALE): <a href="https://linear.app/hedgineer/issue/PLATFRM-6054">PLATFRM-6054</a>, <a href="https://linear.app/hedgineer/issue/LUM-97">LUM-97</a> — ~4 business days since last touch.</li>
+  </ul>
+
+  <footer>
+    Active-time metrics, when available, are a proxy for attention — never a timesheet, never a cross-engineer ranking. This is a single-engineer status card, not a leaderboard.
+  </footer>
+</div>
+</body>
+</html>
