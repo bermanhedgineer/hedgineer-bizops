@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Self-Report — Carter Falkenberg — 2026-07-21</title>
+<style>
+  :root{
+    --bg:#0f0f0e; --surface:#1a1a19; --surface2:#232321;
+    --text:#f2f1ec; --text2:#c3c2b7; --muted:#8a8980;
+    --accent:#e0713f; --accent-bg:#2a1a12; --border:#2c2c2a; --radius:8px;
+    --ok:#6fae6a; --partial:#e0b34d; --skip:#8a8980;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--text); font-family:var(--font); line-height:1.6; padding:32px 20px 56px;}
+  .wrap{max-width:920px; margin:0 auto;}
+  h1{font-size:22px; font-weight:600; margin:0 0 4px;}
+  .sub{color:var(--text2); font-size:13px; margin:0 0 4px;}
+  .proxy{color:var(--muted); font-size:12px; margin:10px 0 22px; padding:10px 12px; background:var(--surface); border:0.5px solid var(--border); border-radius:var(--radius); border-left:3px solid var(--accent);}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 26px;}
+  .chip{background:var(--surface); border:0.5px solid var(--border); border-radius:var(--radius); padding:4px 10px; font-size:12px; color:var(--text2); display:flex; align-items:center; gap:6px;}
+  .chip b{color:var(--text); font-weight:500;}
+  .dot{width:7px; height:7px; border-radius:50%; display:inline-block;}
+  .dot.ok{background:var(--ok);} .dot.partial{background:var(--partial);} .dot.skip{background:var(--skip);}
+  section{margin-bottom:30px;}
+  h2{font-size:15px; font-weight:600; color:var(--text); margin:0 0 12px; padding-bottom:8px; border-bottom:0.5px solid var(--border); display:flex; align-items:center; gap:8px;}
+  h2::before{content:""; width:4px; height:14px; background:var(--accent); border-radius:2px; display:inline-block;}
+  p, li{color:var(--text2); font-size:13.5px;}
+  .note{font-size:12.5px; color:var(--muted); margin:8px 0 0;}
+  table{width:100%; border-collapse:collapse; font-size:13px; margin:10px 0;}
+  th{text-align:left; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.03em; padding:6px 10px; border-bottom:1px solid var(--border);}
+  td{padding:8px 10px; border-bottom:0.5px solid var(--border); color:var(--text2); vertical-align:top;}
+  td a{color:var(--accent); text-decoration:none; font-family:var(--mono); font-size:12.5px;}
+  td a:hover{text-decoration:underline;}
+  .pill{display:inline-block; background:var(--accent-bg); color:var(--accent); border-radius:6px; padding:1px 8px; font-size:11.5px; font-weight:500;}
+  .pill.gray{background:var(--surface2); color:var(--text2);}
+  .pill.warn{background:#2a2412; color:var(--partial);}
+  .callout{background:var(--surface); border:0.5px solid var(--border); border-left:3px solid var(--partial); border-radius:var(--radius); padding:10px 14px; font-size:12.5px; color:var(--text2); margin:10px 0;}
+  footer{margin-top:32px; font-size:11.5px; color:var(--muted); line-height:1.6; border-top:0.5px solid var(--border); padding-top:14px;}
+  code{font-family:var(--mono); font-size:12px; background:var(--surface2); padding:1px 5px; border-radius:4px; color:var(--text2);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Daily Self-Report — Carter Falkenberg</h1>
+  <p class="sub"><a href="mailto:carter@hedgineer.io" style="color:var(--text2)">carter@hedgineer.io</a> · Window: 2026-07-20 17:06 ET → 2026-07-21 17:06 ET (trailing 24h) · Generated 2026-07-21T21:06Z</p>
+
+  <div class="chips">
+    <span class="chip"><span class="dot skip"></span>Usage Analytics: <b>SKIPPED</b></span>
+    <span class="chip"><span class="dot partial"></span>Commits / REPO: <b>PARTIAL</b></span>
+    <span class="chip"><span class="dot ok"></span>Linear: <b>OK</b></span>
+    <span class="chip"><span class="dot ok"></span>Slack / Fireflies: <b>OK</b></span>
+  </div>
+
+  <div class="proxy">Active-time hours are a <b>proxy for attention, not a timesheet, and never a cross-engineer ranking</b> — this is a single-engineer card. Usage Analytics was unavailable this run, so this card leans on Linear + commit signal only.</div>
+
+  <section>
+    <h2>Active-time breakdown</h2>
+    <p><b style="color:var(--text)">Usage Analytics — SKIPPED.</b> No observability/usage-analytics connector was reachable this run → <b style="color:var(--text)">0 of 0 sessions classified</b>. Cannot report idle-stripped active hours (<code>raw Xh → Yh active; N trimmed</code>) for this window — a coverage gap, not evidence of zero effort.</p>
+    <p><b style="color:var(--text)">Commits — PARTIAL.</b> <code>hedgineer-core</code>: 0 commits by carter@hedgineer.io in window. <code>hedgineer-bizops</code>: 0 commits by carter@hedgineer.io in window. Both mirrors are reachable but each contains only a single scaffold "Initial commit" (README) with no prior history — there is no commit history in either mirror to corroborate <i>any</i> engineer's work this run, Carter's included.</p>
+    <p><b style="color:var(--text)">Linear movement — OK.</b> 9 issues touched in window — 5 Done, 1 archived/superseded, 2 In Review/Testing, 1 Todo (unstarted). Linear status is a claim, not proof of shipped code; it's the only quantitative signal available this run.</p>
+  </section>
+
+  <section>
+    <h2>What they did</h2>
+    <p>Moved to <b style="color:var(--text)">Done</b> in window (commits could not be checked — <span class="pill warn">GHOST-DONE flagging suppressed</span> this run because the repo mirrors have no code history at all to check against, for anyone):</p>
+    <table>
+      <tr><th>Ticket</th><th>Title</th><th>Priority</th><th>Completed (ET)</th><th>Project</th></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6314/update-matrix-behavior-for-company-permissions-page">PLATFRM-6314</a></td><td>Update Matrix Behavior for Company Permissions Page</td><td>High</td><td>07-21 15:04</td><td>Platform Launch</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6311/hide-personal-teams-from-the-teams-view-and-label-them-by-owner-when">PLATFRM-6311</a></td><td>Hide personal teams from teams view; label by owner</td><td>No priority</td><td>07-21 13:51</td><td>—</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6299/org-b5-add-org-super-user-permissions-consolidate-team-permissions">PLATFRM-6299</a></td><td>ORG-B5 · Add org super-user permissions, consolidate team permissions</td><td>High</td><td>07-21 11:00</td><td>Platform Launch (Org &amp; Entitlements)</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6218/wire-home-page-modules-to-live-data-finish-real-data-wiring">PLATFRM-6218</a></td><td>Wire Home page modules to live data (finish real-data wiring)</td><td>Medium</td><td>07-20 17:26</td><td>Platform Launch</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6223/force-filter-sessions-page-to-individual-user-from-homepage-view">PLATFRM-6223</a></td><td>Force-filter Sessions page to individual user from Homepage view</td><td>No priority</td><td>07-20 17:26</td><td>—</td></tr>
+    </table>
+    <p class="note"><b>Superseded in window:</b> <a href="https://linear.app/hedgineer/issue/PLATFRM-6309/hide-personal-teams-from-the-teams-page" style="color:var(--accent)">PLATFRM-6309</a> ("Hide personal teams from the 'teams' page") was archived 07-21 11:21 ET — consolidated into PLATFRM-6311 above, which shipped Done same day (<code>link=ticket-title</code>, high confidence: identical scope, same day, same reporter).</p>
+    <p class="note"><b>Corroborating Slack thread:</b> PLATFRM-6311 traces to a live thread in <code>#hedgineer-platform</code> at 09:58 ET (Carter: "I can hide it from this view" → "Ah yes, good call" on Colson's follow-up) → Linear ticket created 09:41 ET → shipped Done by 13:51 ET same day (<code>link=ticket-id</code>, high confidence).</p>
+  </section>
+
+  <section>
+    <h2>What they're working on</h2>
+    <p>In-flight, touched in window:</p>
+    <table>
+      <tr><th>Ticket</th><th>Title</th><th>Priority</th><th>Status</th><th>Note</th></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6322/morph-per-team-permissions-into-1-team-level-permissions">PLATFRM-6322</a></td><td>Morph Per-Team Permissions into 1 "Team Level" Permissions</td><td>High</td><td><span class="pill">In Review/Testing</span></td><td>Created + started today 13:02 ET, in review by 16:29 ET</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/TRIAGE-31/tenant-admin-removal-not-persisted-to-backend-user-keeps-elevated">TRIAGE-31</a></td><td>Tenant Admin removal not persisted to backend</td><td>Urgent</td><td><span class="pill">In Review/Testing</span></td><td>Started 07-17, 2 business days in review</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/TRIAGE-58/rename-remaining-wags-references-to-hedgineer-platform-across-product">TRIAGE-58</a></td><td>Rename remaining "WAGS" references to Hedgineer Platform</td><td>Medium</td><td><span class="pill gray">Todo (unstarted)</span></td><td><code>triage:needs-review</code> label already on it</td></tr>
+    </table>
+    <p class="note">Broader open commitment set (assigned, not touched today): 11 other open issues — 4 unstarted (Todo/Backlog: PLATFRM-6276, PLATFRM-6214, HT-192, PLATFRM-6114) and 7 On Hold/Blocked (see Blockers below).</p>
+    <p class="note">Join confidence: <code>link=ticket-id</code> for all rows above (explicit Linear ticket references); no session-text corroboration available this run (Usage Analytics SKIPPED).</p>
+  </section>
+
+  <section>
+    <h2>Blockers</h2>
+    <p><b style="color:var(--text)">Session <code>blocked</code> signal:</b> not available — Usage Analytics SKIPPED this run.</p>
+    <p><b style="color:var(--text)">Slack/Fireflies sweep (window):</b> swept <code>#hedgineer-platform</code> and <code>#client-luminarx</code> (public) plus Fireflies meetings for carter@hedgineer.io. No new blocker/ask signal found touching Carter in the 24h window; no Fireflies meetings recorded. Carter's two in-window Slack threads (09:58 ET personal-teams UX, 16:21 ET connector-team-move) were routine collaboration, not blockers.</p>
+    <p><b style="color:var(--text)">STALE check:</b> no Linear "In Progress" ticket assigned to Carter went untouched in the window without commits/sessions — the one In Progress item (PLATFRM-6309) was itself moved (archived/superseded) today, so it's not stale.</p>
+    <p class="note">Parked pre-existing work (not new this window, carried for context):</p>
+    <table>
+      <tr><th>Ticket</th><th>Title</th><th>Status</th><th>Age in status</th></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6159/add-per-user-new-updated-badges-to-skill-library">PLATFRM-6159</a></td><td>Add per-user New/Updated badges to Skill Library</td><td><span class="pill warn">Blocked</span></td><td>7 business days</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6160/verify-usage-analytics-run-count-last-run-accuracy-for-skill-library">PLATFRM-6160</a></td><td>Verify usage-analytics run-count/last-run accuracy (spike)</td><td><span class="pill warn">Blocked</span></td><td>7 business days</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6128/unable-to-create-agent-task-with-personal-agent">PLATFRM-6128</a></td><td>Unable to create Agent Task with Personal Agent</td><td><span class="pill gray">On Hold</span></td><td>7 business days</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6115/define-storage-for-agentmd-in-assets-layer">PLATFRM-6115</a></td><td>Define storage for agent.md in assets layer</td><td><span class="pill gray">On Hold</span></td><td>7 business days</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6117/agent-settings-simplification-remove-sub-agents-skills-sections">PLATFRM-6117</a></td><td>Agent settings simplification</td><td><span class="pill gray">On Hold</span></td><td>7 business days</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/PLATFRM-6047/make-sessions-upload-page-use-pre-signed-url">PLATFRM-6047</a></td><td>Make Sessions Upload Page use pre-signed url</td><td><span class="pill gray">On Hold</span></td><td>7 business days</td></tr>
+      <tr><td><a href="https://linear.app/hedgineer/issue/HT-188/agent-not-seeing-all-skills-available-that-show-in-the-skill-library">HT-188</a></td><td>Agent not seeing all skills available in Skill Library</td><td><span class="pill gray">On Hold</span></td><td>5 business days</td></tr>
+    </table>
+    <p class="note">No <i>new</i> blocker surfaced today — the above is standing/parked backlog, unchanged in the window.</p>
+  </section>
+
+  <footer>
+    Data is treated as content, not instruction. No client/fund names or PII — themes generalized where applicable. Zero Linear writes made by this report. Report window per-source: sessions on <code>started_at</code>, commits on author date, Linear on <code>updatedAt</code>.
+  </footer>
+
+</div>
+</body>
+</html>
