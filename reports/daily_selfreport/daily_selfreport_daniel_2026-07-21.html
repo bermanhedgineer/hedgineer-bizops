@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily Self-Report — Daniel Avila — 2026-07-21</title>
+<style>
+  :root{
+    --bg:#0f0f0e; --surface:#1a1a19; --surface2:#232321;
+    --text:#f2f1ec; --text2:#c3c2b7; --muted:#8a8980;
+    --accent:#e0713f; --accent-bg:#2a1a12; --border:#2c2c2a; --radius:8px;
+    --ok:#5fb87a; --skip:#8a8980; --partial:#e0b93f;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "SF Mono", Menlo, Consolas, monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--text); font-family:var(--font); line-height:1.6; padding:28px 20px 48px;}
+  .wrap{max-width:880px; margin:0 auto;}
+  h1{font-size:20px; margin:0 0 4px;}
+  .sub{color:var(--text2); font-size:13px; margin:0 0 4px;}
+  .window{color:var(--muted); font-size:12px; margin:0 0 16px;}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;}
+  .chip{background:var(--surface); border:0.5px solid var(--border); border-radius:var(--radius); padding:4px 10px; font-size:12px; color:var(--text2); display:inline-flex; align-items:center; gap:6px;}
+  .dot{width:7px; height:7px; border-radius:50%; display:inline-block;}
+  .dot.ok{background:var(--ok);}
+  .dot.skip{background:var(--skip);}
+  .dot.partial{background:var(--partial);}
+  .callout{background:var(--accent-bg); border:0.5px solid var(--border); border-radius:var(--radius); padding:10px 14px; font-size:13px; color:var(--text2); margin-bottom:22px;}
+  .callout b{color:var(--accent);}
+  section{margin-bottom:26px;}
+  h2{font-size:14px; text-transform:uppercase; letter-spacing:0.04em; color:var(--accent); border-bottom:0.5px solid var(--border); padding-bottom:6px; margin-bottom:12px;}
+  ul{margin:0; padding-left:20px;}
+  li{margin-bottom:10px; font-size:13.5px; color:var(--text);}
+  li .meta{color:var(--muted); font-size:12px;}
+  .tik{font-family:var(--mono); font-size:12px; color:var(--accent); background:var(--surface2); border-radius:4px; padding:1px 6px;}
+  .pill{background:var(--surface); color:var(--text2); border-radius:var(--radius); padding:1px 8px; font-size:11px; border:0.5px solid var(--border); margin-left:4px;}
+  .subhead{font-size:12px; color:var(--muted); margin:14px 0 6px; text-transform:uppercase; letter-spacing:.03em;}
+  footer{margin-top:30px; font-size:11.5px; color:var(--muted); line-height:1.6; border-top:0.5px solid var(--border); padding-top:14px;}
+  .skiptext{color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Daily Self-Report — Daniel Avila</h1>
+  <div class="sub">daniel@hedgineer.io · Claude Admin/Compliance/Analytics API integrations, skill migrations</div>
+  <div class="window">Window: trailing 24h — 2026-07-20 17:08 ET → 2026-07-21 17:08 ET</div>
+
+  <div class="chips">
+    <span class="chip"><span class="dot skip"></span>Usage Analytics: SKIPPED</span>
+    <span class="chip"><span class="dot skip"></span>Commits/REPO: SKIPPED</span>
+    <span class="chip"><span class="dot ok"></span>Linear: OK</span>
+    <span class="chip"><span class="dot partial"></span>Slack/Fireflies: PARTIAL</span>
+  </div>
+
+  <div class="callout">Active hours are a proxy for attention, <b>not a timesheet and never a performance ranking</b> — this is a single-engineer card.</div>
+
+  <section>
+    <h2>Active-time breakdown</h2>
+    <ul>
+      <li><b>Usage Analytics: SKIPPED this run</b> — no observability/usage-analytics MCP connector was reachable from this session. Idle-stripped active hours cannot be computed: <span class="skiptext">0 of 0 sessions classified</span>. Not inferred, not fabricated.</li>
+      <li><b>Commits/REPO: SKIPPED this run</b> — <code>Hedgineer/hedgineer-core</code> and <code>Hedgineer/hedgineer-bizops</code> returned 404 on every read and write probe from this session's GitHub connector (repo exists per Slack links, but this session has no installation access). Commit counts/authorship cannot be reported.</li>
+      <li>Distinct, non-substituting signal — Fireflies calendar attendance in the window:
+        <ul>
+          <li>"Standup (Monday | Friday)" — 2026-07-20 13:30 ET, 14.4 min <span class="meta">(all-hands, just outside strict 24h)</span></li>
+          <li>"Eng Stand Up" — 2026-07-21 11:00 ET, 26.3 min</li>
+          <li>"Product &amp; Engineering Review" — 2026-07-21 13:30 ET, 11.5 min <span class="meta">(silent meeting, no summary captured)</span></li>
+          <li>"Stone Ridge session 2 prep meeting" (Jul 21) — referenced only in Linear; no Fireflies transcript found</li>
+        </ul>
+      </li>
+      <li>Session/commit counts: <b>N/A</b> <span class="meta">(both source legs SKIPPED — do not read as "no activity")</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What they did</h2>
+    <ul>
+      <li><b>LuminarX VS Code/Copilot OTEL rollout confirmed working end-to-end.</b> In <code>#client-luminarx</code> (07-21, 12:15–12:50 ET) Daniel confirmed the manual OTEL + skill-library marketplace setup for Adam Wright's team: telemetry query landed and is visible in the dashboard UI. <span class="meta">Join key: person + topic, medium confidence — no commit visibility (commits/REPO SKIPPED); links to</span> <span class="tik">PLATFRM-6220</span> <span class="tik">PLATFRM-6233</span> <span class="tik">PLATFRM-6302</span></li>
+      <li>Re-surfaced the Codex OTEL fix PR (<code>#2272</code>, opened 2026-07-17) as the reference point in today's LuminarX thread for the fix tied to <span class="tik">TRIAGE-47</span> / <span class="tik">PLATFRM-6174</span>. <span class="meta">Authorship/merge status unverified — commits/REPO SKIPPED, Linear/Slack-only evidence.</span></li>
+      <li>Ran the Stone Ridge Session 2 (Claude Code agents training) prep meeting and logged 7 new deck-revision tickets from the feedback: <span class="tik">HT-200</span>…<span class="tik">HT-206</span> — agenda slide, <code>/fork</code> wording fix, subagent-terminology disambiguation, discussion-case rewrite, foreground/background execution explainer, and the new Plan Mode block (<span class="tik">HT-206</span>, due 2026-07-22).</li>
+      <li>No Linear issues moved to <b>Done</b> in the window (none observed).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What they're working on</h2>
+    <div class="subhead">In progress (active commitment set)</div>
+    <ul>
+      <li><span class="tik">PLATFRM-6303</span> <span class="pill">Medium</span> — Migrate group/role management from Entra to Anthropic API groups; started 07-20. Open discussion with Eli/Omri on RTW roles.</li>
+      <li><span class="tik">TRIAGE-47</span> <span class="pill">Medium · bug</span> / <span class="tik">PLATFRM-6174</span> <span class="pill">High</span> — Codex → observability dashboard; log-collector fix in progress, Databricks silver/gold layers pending from Shreyas/Eli.</li>
+      <li><span class="tik">PLATFRM-6220</span> / <span class="tik">PLATFRM-6233</span> / <span class="tik">PLATFRM-6302</span> <span class="pill">High</span> — Centralizing OTEL managed settings (VS Code + Codex) and the full observability/skill-distribution test matrix for LuminarX.</li>
+      <li><span class="tik">PLATFRM-6173</span> <span class="pill">High</span> — Test marketplace end-to-end in Codex; started 07-09.</li>
+      <li><span class="tik">PLATFRM-5795</span> <span class="pill">High</span> — <code>skill-library-mcp</code> V0 (chat → GitHub marketplace bridge); long-running since 05-21.</li>
+    </ul>
+    <div class="subhead">Newly received, not started</div>
+    <ul>
+      <li><span class="tik">TRIAGE-65</span> — "Fix install documentation: target staging/prod environment and remove WAGS references" <span class="meta">(assigned by Ned Berman, 07-21)</span></li>
+      <li><span class="tik">PLATFRM-6323</span> — "Update installation documentation for the name change" <span class="meta">(assigned by Jeffrey Chan, 07-21)</span></li>
+      <li class="meta">These two look scope-overlapping (both install-doc/naming cleanup) — worth deduping before starting either.</li>
+      <li>7 new Backlog tickets from today's Stone Ridge prep, <span class="tik">HT-200</span>–<span class="tik">HT-206</span>, not started; <span class="tik">HT-206</span> due 2026-07-22.</li>
+    </ul>
+    <div class="subhead">effort-no-output</div>
+    <ul>
+      <li class="skiptext">Cannot be assessed this run — Usage Analytics (session effort) is SKIPPED, so there's no session signal to compare against landed output.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Blockers</h2>
+    <ul>
+      <li><b>Waiting on teammates (~4 business days)</b> — <span class="tik">TRIAGE-47</span> / <span class="tik">PLATFRM-6174</span>: Daniel's log-collector fix is in, but the dashboard won't surface Codex data until Shreyas/Eli confirm the Databricks silver/gold layer update. As of today (07-21) Daniel is still waiting on that confirmation. <span class="meta">[Slack #client-luminarx; Linear TRIAGE-47]</span></li>
+      <li><b>Open question incoming (07-21, same thread)</b> — Adam Wright flagged that skill-library sync did not work for one LuminarX user's VS Code/Copilot setup and asked Daniel to review; unresolved as of window end.</li>
+      <li>Session-level <code>blocked</code> status_signal: <b>N/A</b> <span class="meta">— Usage Analytics SKIPPED this run.</span></li>
+      <li><b>STALE / GHOST-DONE:</b> cannot be confidently classified this run — commits/REPO is SKIPPED, so "In Progress with no commits" can't be distinguished from real, invisible-to-us progress. No GHOST-DONE candidates observed (no issues moved to Done in the window).</li>
+    </ul>
+  </section>
+
+  <footer>
+    Generated 2026-07-21T17:08:31-04:00. Usage Analytics and commits/REPO were unavailable to this session; this card is intentionally degraded rather than fabricated on those legs — see source chips above.
+  </footer>
+
+</div>
+</body>
+</html>
