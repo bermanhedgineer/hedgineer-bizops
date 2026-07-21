@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily Self-Report — Patrick Beljan — 2026-07-21</title>
+<style>
+  :root{
+    --bg:#0b0b0d;
+    --panel:#141417;
+    --panel-border:#26262b;
+    --text:#e8e6e3;
+    --muted:#9a978f;
+    --accent:#ff6a3d;
+    --accent2:#ffab7a;
+    --ok:#3ddc97;
+    --skip:#6b6f76;
+    --partial:#ffcc4d;
+    --danger:#ff5c5c;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:32px; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+  }
+  .card{max-width:880px;margin:0 auto;}
+  h1{font-size:22px;margin:0 0 4px;color:#fff;}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:24px;}
+  .sub b{color:var(--text);}
+  h2{
+    font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--accent2);
+    border-bottom:1px solid var(--panel-border);padding-bottom:8px;margin:28px 0 14px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+  .chip{
+    display:flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--panel-border);
+    border-radius:999px;padding:6px 12px;font-size:12.5px;
+  }
+  .dot{width:8px;height:8px;border-radius:50%;flex:none;}
+  .dot.ok{background:var(--ok);}
+  .dot.skip{background:var(--skip);}
+  .dot.partial{background:var(--partial);}
+  .chip-status{font-weight:700;text-transform:uppercase;font-size:11px;letter-spacing:.03em;}
+  .chip-status.ok{color:var(--ok);}
+  .chip-status.skip{color:var(--skip);}
+  .chip-status.partial{color:var(--partial);}
+  .chip-note{color:var(--muted);}
+  .panel{
+    background:var(--panel);border:1px solid var(--panel-border);border-radius:10px;
+    padding:16px 18px;margin-bottom:14px;
+  }
+  .panel .headline{font-size:15px;color:#fff;margin:0 0 6px;font-weight:600;}
+  .panel .meta{font-size:12.5px;color:var(--muted);margin-bottom:8px;}
+  .tag{
+    display:inline-block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;
+    padding:2px 8px;border-radius:5px;margin-right:6px;
+  }
+  .tag.done{background:rgba(61,220,151,.14);color:var(--ok);}
+  .tag.review{background:rgba(255,171,122,.14);color:var(--accent2);}
+  .tag.progress{background:rgba(255,204,77,.14);color:var(--partial);}
+  .tag.weak{background:rgba(107,111,118,.2);color:var(--muted);}
+  .tag.strong{background:rgba(255,106,61,.16);color:var(--accent);}
+  a{color:var(--accent2);text-decoration:none;border-bottom:1px dotted rgba(255,171,122,.4);}
+  a:hover{color:var(--accent);}
+  ul{margin:6px 0 0 0;padding-left:20px;}
+  li{margin-bottom:4px;font-size:13.5px;}
+  code{background:#1c1c20;padding:1px 5px;border-radius:4px;font-size:12.5px;color:var(--accent2);}
+  .idle-strip{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#1c1c20;
+    border:1px solid var(--panel-border);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--partial);
+    margin-bottom:10px;
+  }
+  .note{font-size:12.5px;color:var(--muted);}
+  .empty{color:var(--muted);font-style:italic;font-size:13.5px;}
+  footer{margin-top:26px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--panel-border);padding-top:12px;}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Daily Self-Report — Patrick Beljan</h1>
+  <div class="sub">
+    <b>patrick@hedgineer.io</b> &nbsp;·&nbsp; Window: <b>2026-07-20 17:00 → 2026-07-21 17:00</b> America/New_York (trailing 24h)
+    &nbsp;·&nbsp; Generated 2026-07-21T21:01:53Z
+  </div>
+
+  <h2>Source chips</h2>
+  <div class="chips">
+    <div class="chip"><span class="dot skip"></span><span class="chip-status skip">Skipped</span><span class="chip-note">Usage Analytics — no observability/usage-analytics connector reachable</span></div>
+    <div class="chip"><span class="dot partial"></span><span class="chip-status partial">Partial</span><span class="chip-note">Commits/REPO — direct git unreachable; Linear PR/diff proxy used, authorship unverified</span></div>
+    <div class="chip"><span class="dot ok"></span><span class="chip-status ok">OK</span><span class="chip-note">Linear — canonical .io identity, no override needed</span></div>
+    <div class="chip"><span class="dot partial"></span><span class="chip-status partial">Partial</span><span class="chip-note">Slack/Fireflies — public search + Eng Standup transcripts; no DM sweep</span></div>
+  </div>
+
+  <h2>Active-time breakdown</h2>
+  <div class="idle-strip">raw 0h → 0h active; 0 of 0 sessions classified</div>
+  <p class="note">Usage Analytics is unavailable this run — no idle-stripped active-hour figure can be reported for Patrick. This is a coverage gap, not a claim of zero effort. Active time is a proxy for attention, never a timesheet or a cross-engineer ranking.</p>
+  <ul>
+    <li><b>3</b> Linear work units touched in-window: 2 → Done, 1 created &amp; shipped to In Review/Testing same day.</li>
+    <li><b>1</b> work unit already in flight (In Progress, started just before window open).</li>
+    <li>Code-truth proxy (PARTIAL): 3 PRs referenced via Linear GitHub attachments — #2210, #2235, #2311, #2338 — authorship unverified.</li>
+  </ul>
+
+  <h2>What they did</h2>
+  <div class="panel">
+    <div class="headline">HT-195 — Rename wma/wags-managed-agents → hedgineer-platform in bizops</div>
+    <div class="meta"><span class="tag done">Done</span><span class="tag strong">ticket-id</span>Completed 2026-07-21 12:18 ET</div>
+    Three-phase rename plan; Phase 1 PR <a href="https://github.com/Hedgineer/hedgineer-bizops/pull/2210">#2210</a>, Phase 2 PR <a href="https://github.com/Hedgineer/hedgineer-bizops/pull/2235">#2235</a>. Closes out the 2026-07-17 staging cutover incident (naming change broke the staging ArgoCD Application; worked with Eli/Omri/Alex on the revert/fix) — today's Done is the resolution.
+  </div>
+  <div class="panel">
+    <div class="headline">PLATFRM-6267 — Error differentiation audit</div>
+    <div class="meta"><span class="tag done">Done</span><span class="tag strong">ticket-id</span>Completed 2026-07-21 10:16 ET · P2 · Effort 8 (XL)</div>
+    Inventoried where errors are swallowed/over-caught vs. should be differentiated. Linked PR <code>#2311</code> "docs(hedgineer-platform): OpenSpec change to catalog and improve error messages" on <code>feat/error-message-catalog</code> (4 commits attached via Linear).
+  </div>
+  <div class="panel">
+    <div class="headline">PLATFRM-6312 — Local kind + ArgoCD deploy-path harness (local-deploy)</div>
+    <div class="meta"><span class="tag review">In Review/Testing</span><span class="tag strong">ticket-id</span>Created &amp; shipped 2026-07-21 12:11–12:12 ET</div>
+    Opt-in local harness (kind + ArgoCD + platform controllers) validating GitOps/Argo reconcile behavior pre-push. PR <a href="https://github.com/Hedgineer/hedgineer-bizops/pull/2338">#2338</a> attached; not yet indexed in Linear's diff integration — merge status unconfirmed.
+  </div>
+  <p class="note">No UNTICKETED commits surfaced. No GHOST-DONE — both Done issues carry attached PR/commit evidence, not just a status flip.</p>
+
+  <h2>What they're working on</h2>
+  <div class="panel">
+    <div class="headline">PLATFRM-6298 — Enhance the AI-Observability Pipeline to Lower Latency and add DB Portability</div>
+    <div class="meta"><span class="tag progress">In Progress</span><span class="tag weak">person + scope</span>Started 2026-07-20 08:54 ET · High priority</div>
+    No commits/PR attached yet → effort, no output (too recent to call stale). Topically consistent with the 2026-07-21 Eng Standup's "MCP optimization" / observability-pipeline discussion and Patrick's original AI-observability/data-platform focus area. Medium confidence — topical overlap only, no explicit ticket reference in the standup transcript.
+  </div>
+
+  <h2>Blockers</h2>
+  <p class="empty">(none) — no blocker signal tied to Patrick specifically inside the window, from Linear comments or the Slack/Fireflies sweep.</p>
+  <p class="note">For context only, not a personal blocker: the 2026-07-21 Eng Standup flagged RTW production blocked by an expired Azure secret (data stale since prior market close); Omri was actively rerunning the affected tasks with a ~30-minute ETA — team-wide item, not something blocking Patrick.</p>
+
+  <footer>
+    Active-time is a proxy for attention, not a timesheet, and never a cross-engineer ranking — this card covers one engineer only.
+    No client/fund names are included; none were present in source material for this window.
+  </footer>
+</div>
+</body>
+</html>
