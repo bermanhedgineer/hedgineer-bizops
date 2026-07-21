@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Self-Report — Max Chirkov — 2026-07-21</title>
+<style>
+  :root{
+    --bg:#0f0f0e; --surface:#1a1a19; --surface2:#232321;
+    --text:#f2f1ec; --text2:#c3c2b7; --muted:#8a8980;
+    --accent:#e0713f; --accent-bg:#2a1a12; --border:#2c2c2a; --radius:8px;
+    --ok:#7fb37a; --warn:#e0713f; --skip:#8a8980;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--text); font-family:var(--font); line-height:1.6; padding:28px 20px 48px;}
+  .wrap{max-width:920px; margin:0 auto;}
+  h1{font-size:22px; font-weight:500; margin:0 0 2px;}
+  h2{font-size:15px; font-weight:600; color:var(--text); margin:28px 0 10px; padding-bottom:6px; border-bottom:0.5px solid var(--border);}
+  .sub{color:var(--text2); font-size:13px; margin:0 0 4px;}
+  .callout{color:var(--text2); font-size:12.5px; background:var(--surface); border:0.5px solid var(--border); border-radius:var(--radius); padding:10px 14px; margin:14px 0 20px;}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px;}
+  .chip{background:var(--surface); border:0.5px solid var(--border); border-radius:var(--radius); padding:4px 10px; font-size:12px; color:var(--text2);}
+  .chip b{font-weight:600;}
+  .chip.ok b{color:var(--ok);}
+  .chip.partial b{color:var(--warn);}
+  .chip.skipped b{color:var(--skip);}
+  p{font-size:13.5px; color:var(--text2); margin:8px 0;}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .note{background:var(--surface); border:0.5px solid var(--border); border-radius:var(--radius); padding:10px 14px; font-size:13px; color:var(--text2); margin:10px 0;}
+  .note b{color:var(--text);}
+  table{width:100%; border-collapse:collapse; font-size:13px; margin:10px 0;}
+  th{text-align:left; font-size:11px; color:var(--muted); font-weight:500; padding:6px 10px; border-bottom:0.5px solid var(--border);}
+  td{padding:8px 10px; border-bottom:0.5px solid var(--border); color:var(--text2); vertical-align:top;}
+  td.mono{font-family:var(--mono); color:var(--accent); font-size:12px; white-space:nowrap;}
+  td a{color:var(--accent);}
+  .pill{background:var(--accent-bg); color:var(--accent); border-radius:var(--radius); padding:1px 8px; font-weight:500; font-size:12px; white-space:nowrap;}
+  .pill.todo{background:var(--surface2); color:var(--text2);}
+  ul{font-size:13.5px; color:var(--text2); padding-left:20px;}
+  li{margin:6px 0;}
+  li b{color:var(--text);}
+  footer{margin-top:30px; font-size:11.5px; color:var(--muted); line-height:1.7; border-top:0.5px solid var(--border); padding-top:14px;}
+  footer b{color:var(--text2);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Daily Self-Report — Max Chirkov</h1>
+  <p class="sub"><b>Engineer:</b> Max Chirkov (<a href="mailto:max@hedgineer.io">max@hedgineer.io</a>)</p>
+  <p class="sub"><b>Window:</b> 2026-07-20 17:06 → 2026-07-21 17:06 America/New_York (trailing 24h)</p>
+  <p class="sub"><b>Generated:</b> 2026-07-21 17:06 America/New_York</p>
+
+  <div class="chips">
+    <div class="chip skipped">Usage Analytics <b>SKIPPED</b></div>
+    <div class="chip partial">Commits/REPO <b>PARTIAL</b></div>
+    <div class="chip ok">Linear <b>OK</b></div>
+    <div class="chip partial">Slack <b>PARTIAL</b></div>
+    <div class="chip partial">Fireflies <b>PARTIAL</b></div>
+  </div>
+
+  <div class="callout">Active time is a proxy for where attention went, not a timesheet, and never a cross-engineer performance ranking — this is a single-engineer card by design.</div>
+
+  <h2>Active-time breakdown</h2>
+  <div class="note"><b>No idle-stripped active-time data this run.</b> No Usage Analytics / observability MCP connector is attached to this session, so idle-strip math (<code>raw Xh → Yh active; N trimmed</code>) and session coverage (<code>N of M classified</code>) cannot be computed. This is reported as unavailable — not as zero hours — and is not inferred from Linear or Slack activity.</div>
+
+  <h2>What they did</h2>
+  <p><b>Nothing landed in this window.</b> No commits attributed to Max Chirkov were confirmed on <code>hedgineer-core</code> or <code>hedgineer-bizops</code>, and no Linear issues assigned to him moved (<code>updatedAt</code>) in the window.</p>
+  <p>For continuity (outside this window): Max's last confirmed activity was <b>2026-07-17</b>, a Slack update in <code>#hedgineer-platform</code> marking six items complete and merged to staging — <a href="https://linear.app/hedgineer/issue/TRIAGE-9/all-teams-filter-resets-back-to-engineers">TRIAGE-9</a>, <a href="https://linear.app/hedgineer/issue/TRIAGE-17/add-launch-agent-with-this-skill-button-on-skill-page">TRIAGE-17</a>, <a href="https://linear.app/hedgineer/issue/PLATFRM-6245/add-hideshow-details-toggle-to-observability-replay-session-page">PLATFRM-6245</a>, <a href="https://linear.app/hedgineer/issue/PLATFRM-6252/filters-button-does-nothing-on-mobile-filter-panel-never-opens">PLATFRM-6252</a>, <a href="https://linear.app/hedgineer/issue/PLATFRM-6253/detail-page-loading-skeletons-dont-match-the-real-layout">PLATFRM-6253</a>, <a href="https://linear.app/hedgineer/issue/PLATFRM-6256/sidebar-close-button-does-nothing-on-mobile">PLATFRM-6256</a>. Linear confirms all six <code>Done</code> (completed 2026-07-16/17). One (TRIAGE-17) was flagged for a revert by Jeffrey Chan the same day; Carter Falkenberg executed the revert in staging. Link key: <code>ticket-id</code>, confidence high (Slack thread + Linear status agree).</p>
+
+  <h2>What they're working on</h2>
+  <p>Active commitment set (assigned, open, regardless of last update) — none touched in this window:</p>
+  <table>
+    <tr><th>Ticket</th><th>Title</th><th>Status</th><th>Priority</th><th>Notes</th></tr>
+    <tr>
+      <td class="mono"><a href="https://linear.app/hedgineer/issue/PLATFRM-6111/agent-creation-plan-mode-remove-broken-write-with-ai-button-and">PLATFRM-6111</a></td>
+      <td>Agent creation "plan mode" + remove broken "Write with AI" button</td>
+      <td><span class="pill">In Review/Testing</span></td>
+      <td>High</td>
+      <td>PR <code>hedgineer-bizops#2061</code> attached since 2026-07-10; no confirmed commit/session activity this window. Link key: <code>person-only</code>, unconfirmed (commits leg is PARTIAL).</td>
+    </tr>
+    <tr>
+      <td class="mono"><a href="https://linear.app/hedgineer/issue/PLATFRM-6285/build-agents-active-tab-merged-schedules-triggers-with-status-model">PLATFRM-6285</a></td>
+      <td>Build Agents "Active" tab — merged schedules + triggers</td>
+      <td><span class="pill todo">Todo</span></td>
+      <td>High</td>
+      <td>Unstarted since created 2026-07-17.</td>
+    </tr>
+    <tr>
+      <td class="mono"><a href="https://linear.app/hedgineer/issue/PLATFRM-6294/build-studio-schedule-guided-walkthrough-for-recurring-runs-cron">PLATFRM-6294</a></td>
+      <td>Build Studio Schedule — guided walkthrough for recurring runs</td>
+      <td><span class="pill todo">Todo</span></td>
+      <td>Medium</td>
+      <td>Unstarted since created 2026-07-17.</td>
+    </tr>
+    <tr>
+      <td class="mono"><a href="https://linear.app/hedgineer/issue/PLATFRM-6293/build-studio-create-agent-mode-full-settings-surface-planbuild">PLATFRM-6293</a></td>
+      <td>Build Studio Create — Agent mode</td>
+      <td><span class="pill todo">Todo</span></td>
+      <td>Medium</td>
+      <td>Unstarted since created 2026-07-17.</td>
+    </tr>
+    <tr>
+      <td class="mono"><a href="https://linear.app/hedgineer/issue/PLATFRM-6281/rebuild-observability-sessions-tab-default-100-load-big-window-confirm">PLATFRM-6281</a></td>
+      <td>Rebuild Observability Sessions tab</td>
+      <td><span class="pill todo">Todo</span></td>
+      <td>Medium</td>
+      <td>Unstarted since created 2026-07-17.</td>
+    </tr>
+    <tr>
+      <td class="mono"><a href="https://linear.app/hedgineer/issue/PLATFRM-6279/close-home-v3-gaps-role-filtered-whats-new-my-usage-my-change-requests">PLATFRM-6279</a></td>
+      <td>Close Home v3 gaps</td>
+      <td><span class="pill todo">Todo</span></td>
+      <td>Medium</td>
+      <td>Unstarted since created 2026-07-17.</td>
+    </tr>
+  </table>
+  <p>No <code>effort-no-output</code> sessions can be surfaced — the sessions leg is <code>SKIPPED</code> this run.</p>
+
+  <h2>Blockers</h2>
+  <ul>
+    <li><b>No session <code>blocked</code> status_signal</b> — Usage Analytics is <code>SKIPPED</code>, so this signal is unavailable, not confirmed-clear.</li>
+    <li><b>No Slack/Fireflies blocker or ask signal touching Max in this window</b> — swept public <code>#hedgineer-platform</code> mentions/DMs-to and Fireflies meetings with Max as a participant since 2026-07-14; nothing in-window (nearest Fireflies hit, 2026-07-14 "AI Standup," was cancelled with no attendees).</li>
+    <li><b>Possible stuck item (flag, not confirmed):</b> <code>PLATFRM-6111</code> has sat in <b>In Review/Testing for 11 business days</b> (since 2026-07-10) with no commit/session activity confirmed this window. Unclear whether it's blocked on a reviewer or on Max — worth a direct check rather than an auto-classification, since the commits leg is only <code>PARTIAL</code> here.</li>
+    <li><b>Coverage gap, not a confirmed blocker:</b> Max shows zero activity across every source checked this run (Linear, Slack, Fireflies) for the full trailing-24h window, and his last confirmed activity of any kind was <b>2026-07-17</b> (~4 days prior; Linear also shows him "Offline" since then). No OOO/PTO note was found in swept channels — reported as an observed gap, not a diagnosed cause.</li>
+  </ul>
+
+  <footer>
+    <b>Usage Analytics:</b> SKIPPED — no observability/Usage Analytics MCP connector attached to this session. Hours, session counts, and status_signal are not fabricated.<br>
+    <b>Commits/REPO:</b> PARTIAL — direct GitHub MCP access to Hedgineer/hedgineer-core and Hedgineer/hedgineer-bizops returned no reachable repos this run (a known recurring outage, corroborated by a same-issue report posted in #hedgineer-platform on 2026-07-10). Substituted Linear's PR/diff integration (list_diffs) as a code-truth proxy for hedgineer-core only; per-commit authorship is unverified. No PRs authored by Max were found via that proxy in or near the window; hedgineer-bizops#2061 (referenced on PLATFRM-6111) could not be independently looked up through the same integration.<br>
+    <b>Linear:</b> OK — list_issues for assignee=max@hedgineer.io, both updatedAt-in-window and the full open/assigned set regardless of update date.<br>
+    <b>Slack:</b> PARTIAL — public-channel search only (from:/to: Max, plus name/OOO keyword sweep); no private-channel/DM search was run under file_only delivery.<br>
+    <b>Fireflies:</b> PARTIAL — checked meetings with Max as a participant since 2026-07-14; none fall inside the window.
+  </footer>
+</div>
+</body>
+</html>
