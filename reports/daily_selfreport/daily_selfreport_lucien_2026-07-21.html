@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Self-Report — Lucien Putnam — 2026-07-21</title>
+<style>
+  :root{
+    --bg:#0A0A0A; --bgElevated:#171717; --bgSurface:#1F1F1F; --bgMuted:#262626;
+    --fg:#F5F5F5; --fgWhite:#FFFFFF; --fgMuted:#A1A1A1; --fgDimmed:#A3A3A3; --fgSubtle:#737373;
+    --border:#262626; --borderSubtle:#404040;
+    --successFg:#2EAE5C; --successBg:#04200E;
+    --dangerFg:#E8525F; --dangerBg:#31191B;
+    --warningFg:#FFD166; --warningBg:#2E2309;
+    --accent:#E65A1E; --accentBlue:#60A5FA;
+    --font:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--fg); font-family:var(--font); line-height:1.6; padding:28px 20px 56px;}
+  .wrap{max-width:900px; margin:0 auto;}
+  .logo-row{display:flex; justify-content:flex-end; margin-bottom:18px;}
+  .logo{font-size:14px; font-weight:300; letter-spacing:0.28em; color:#fff; font-family:Georgia,'Times New Roman',serif;}
+  h1{font-size:22px; font-weight:600; margin:0 0 4px; color:var(--fgWhite);}
+  .sub{color:var(--fgMuted); font-size:13px; margin:0 0 4px;}
+  .proxy-note{color:var(--fgSubtle); font-size:12px; margin:6px 0 20px; font-style:italic;}
+  h2{font-size:16px; font-weight:600; color:var(--fgWhite); margin:28px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--border);}
+  .chips-table{width:100%; border-collapse:collapse; margin:10px 0 6px; font-size:13px;}
+  .chips-table th, .chips-table td{text-align:left; padding:6px 10px; border-bottom:1px solid var(--border);}
+  .chips-table th{color:var(--fgDimmed); font-weight:500; font-size:12px;}
+  .chip{display:inline-block; border-radius:6px; padding:2px 8px; font-size:12px; font-weight:600;}
+  .chip.ok{background:var(--successBg); color:var(--successFg);}
+  .chip.partial{background:var(--warningBg); color:var(--warningFg);}
+  .chip.skipped{background:var(--dangerBg); color:var(--dangerFg);}
+  .card{background:rgba(10,10,10,0.6); border:1px solid var(--border); border-radius:12px; padding:14px 16px; margin-bottom:12px;}
+  .card p{margin:6px 0;}
+  .id{font-family:var(--mono); color:var(--accent); font-size:12px;}
+  .tag{display:inline-block; font-size:11px; font-weight:600; border-radius:4px; padding:1px 6px; margin-left:6px; vertical-align:middle;}
+  .tag.unticketed{background:var(--warningBg); color:var(--warningFg);}
+  .tag.stale{background:var(--dangerBg); color:var(--dangerFg);}
+  .tag.confirmed{background:var(--successBg); color:var(--successFg);}
+  .tag.effort{background:var(--bgMuted); color:var(--fgDimmed);}
+  .blocker{border-left:3px solid var(--dangerFg); padding:10px 14px; margin-bottom:10px; background:var(--dangerBg); border-radius:0 8px 8px 0;}
+  .blocker.medium{border-left-color:var(--warningFg); background:var(--warningBg);}
+  .blocker b{color:var(--fgWhite);}
+  ul{padding-left:20px;}
+  li{margin-bottom:10px;}
+  a{color:var(--accentBlue); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  footer{margin-top:30px; font-size:12px; color:var(--fgSubtle); line-height:1.6; border-top:1px solid var(--border); padding-top:14px;}
+  code{background:var(--bgMuted); padding:1px 5px; border-radius:4px; font-family:var(--mono); font-size:12px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="logo-row"><span class="logo">HEDGINEER</span></div>
+
+  <h1>Daily Self-Report — Lucien Putnam</h1>
+  <p class="sub"><b>lucien@hedgineer.io</b> · Window: trailing 24h, 2026-07-20 17:02 ET → 2026-07-21 17:02 ET (Tuesday) · Generated 2026-07-21T21:02:03Z</p>
+  <p class="proxy-note">Active-time is a proxy for where attention went — not a timesheet, and never a cross-engineer performance ranking.</p>
+
+  <h2>Source chips</h2>
+  <table class="chips-table">
+    <tr><th>Source</th><th>Status</th><th>Note</th></tr>
+    <tr><td>Usage Analytics</td><td><span class="chip skipped">SKIPPED</span></td><td>No observability / usage-analytics connector attached this session — idle-stripped hours not computed, not estimated.</td></tr>
+    <tr><td>Commits · hedgineer-core</td><td><span class="chip skipped">SKIPPED</span></td><td>Repo not reachable from the attached GitHub connector.</td></tr>
+    <tr><td>Commits · hedgineer-bizops</td><td><span class="chip partial">PARTIAL</span></td><td>Reachable; zero commits by lucien@hedgineer.io in-window. Code-truth for work described below is unconfirmed.</td></tr>
+    <tr><td>Linear</td><td><span class="chip ok">OK</span></td><td>Assignee = Lucien Putnam, updatedAt in-window + open commitment set.</td></tr>
+    <tr><td>Slack / Fireflies</td><td><span class="chip partial">PARTIAL</span></td><td>Public-channel search + Fireflies summaries only; private/DM search skipped (no explicit consent this run).</td></tr>
+  </table>
+  <p class="proxy-note">Identity note: Fireflies rosters list Lucien as both <code>lucien@hedgineer.io</code> and <code>lucien@hedgineer.ai</code> — merged under the canonical <code>.io</code> address per the known TRIAGE-8 duplicate-persona pattern; flagged as a new instance.</p>
+
+  <h2>Active-time breakdown</h2>
+  <div class="card">
+    <p><b>Usage Analytics: SKIPPED.</b> No idle-stripped active hours, session/message counts, or coverage (<code>N of M classified</code>) available for lucien@hedgineer.io this run — none are estimated in their place.</p>
+    <p>Reconstructed activity signal (lower confidence, not an hours figure):</p>
+    <ul style="margin-bottom:0;">
+      <li>Linear: <b>7 issues</b> touched in-window, all assignee = Lucien Putnam (Product Triage + Hedgineer Technologies).</li>
+      <li>Slack: <b>2 sustained threads</b> in <code>#hedgineer-platform</code> (MCP endpoint consolidation; session-expiry/JWT root-cause).</li>
+      <li>Fireflies: attended <i>Eng Stand Up</i> (2026-07-21, 11:00 ET) — flagged for LuminarX role-permissions work.</li>
+    </ul>
+  </div>
+
+  <h2>What they did</h2>
+  <p class="proxy-note" style="margin-top:-4px;">Commits leg SKIPPED/PARTIAL — "did" below is Linear + Slack signal only; code truth unconfirmed.</p>
+  <div class="card">
+    <p><span class="id">TRIAGE-67</span><span class="tag unticketed">fix unconfirmed</span> — <b>MCP authorization broken on new staging URL.</b> Colson Xu reported <code>app.staging.hedgineer.ai/mcp</code> rejecting connections (09:23 ET). Lucien attempted an in-thread fix ("try again just fixed") and posted a CI run in hedgineer-bizops, but Colson confirmed <b>"Same issue"</b> — still unresolved. link=ticket-id, medium confidence.</p>
+  </div>
+  <div class="card">
+    <p><span class="tag unticketed">UNTICKETED</span> — <b>Session-expiry / JWT signing-secret root cause.</b> In <code>#hedgineer-platform</code> (13:59–14:55 ET) Lucien diagnosed that the JWT signing secret regenerates on every container boot, invalidating tokens across redeploys — proposed moving it to Secrets Manager/SSM. Said <b>"Ill fix it."</b> No Linear ticket found; shipped-status unconfirmed (commits SKIPPED). link=person+scope.</p>
+  </div>
+  <div class="card">
+    <p><b>MCP endpoint consolidation</b> for the platform rename (13:16–14:00 ET) — decided which of ~10 MCP server URLs to keep/remove with Daniel Avila, Ned Berman, Shreyas Aditya; supports <span class="id">HT-194</span> sub-phase 3c. link=person+scope.</p>
+  </div>
+  <div class="card">
+    <p><span class="id">TRIAGE-40</span><span class="tag effort">Linear-claimed Done</span> — Terraform override key blocking staging deploy. <code>completedAt</code> 2026-07-20 16:39 ET (~4.3h before this window). Code truth unconfirmed (hedgineer-core unreachable) — not called GHOST-DONE since the code leg was never checked, only unavailable.</p>
+  </div>
+
+  <h2>What they're working on</h2>
+  <div class="card">
+    <p><span class="id">HT-194</span><span class="tag confirmed">confirmed active</span> — <b>WMA → Hedgineer Platform Phase 3: stateful/external cutover.</b> In Progress since 2026-07-17, Medium priority. Confirmed via Linear + today's MCP-endpoint work (sub-phase 3c). OpenSpec PR #2247 (hedgineer-bizops, draft) is source of truth; commits leg SKIPPED.</p>
+  </div>
+  <div class="card">
+    <p><span class="tag effort">effort, no output</span> — <b>LuminarX backend role-permissions / observability.</b> Fireflies "Eng Stand Up" (11:00 ET): "Luminarc's backend role permissions causing user observability issues, with pending updates being handled by Lucien." No linked ticket found. link=person-only, low-medium confidence.</p>
+  </div>
+  <div class="card">
+    <p><span class="id">TRIAGE-53 / TRIAGE-57</span> — Newly added MCP integrations auto-blocked for existing user groups (LuminarX). Todo, unstarted, High priority, client-impacting duplicate pair.</p>
+    <p><span class="id">TRIAGE-52 / TRIAGE-56</span> — Skill team-sharing without transferring ownership. Todo, unstarted, Medium priority.</p>
+    <p><span class="id">PLATFRM-6301</span> — ORG: relabel team tier "Contributor" → "Team Owner". Todo, unstarted, High priority (AuthZ/roles).</p>
+    <p><span class="id">HT-199</span> — Standardize backup &amp; DR process for clients + internal environments. Backlog, not started.</p>
+  </div>
+
+  <h2>Blockers</h2>
+  <div class="blocker">
+    <p><b>HT-198 — Urgent: full backup of Hedgineer-internal Postgres before app rename ships.</b> Priority Urgent, due date 2026-07-20 has passed (now overdue), still Backlog / not started. Lucien drove the client-side (LuminarX) backup with Siddharth Yadav, but when Ned Berman asked in-thread to confirm Lucien owns the Hedgineer-internal backup, there's no explicit yes/no in the sweep. Risk: an Urgent infra item with an unconfirmed owner, already past its stated deadline.</p>
+  </div>
+  <div class="blocker medium">
+    <p><b>TRIAGE-67 — MCP staging auth fix did not hold.</b> Lucien's own fix attempt was confirmed not to resolve Colson's repro ("Same issue"); no follow-up root cause yet. Actively blocking MCP usage for at least one engineer.</p>
+  </div>
+  <div class="blocker medium">
+    <p><b>Session-expiry (JWT signing-secret) bug — untracked.</b> Recurring, user-facing (reported again today by Samuel Barton, "was an issue last week too"). Root cause diagnosed and fix proposed by Lucien today, but no Linear ticket found and no shipped-fix confirmation available (commits SKIPPED).</p>
+  </div>
+  <p class="proxy-note">No Usage Analytics <code>blocked</code> status_signal available this run (source SKIPPED) — blockers above are sourced from Linear + Slack only.</p>
+
+  <footer>
+    Active-time is a proxy for attention, not a timesheet or a cross-engineer ranking. Client/fund names generalized where applicable; no PII included.<br>
+    Generated by the self-report skill · hedgineer-bizops/reports/daily_selfreport
+  </footer>
+</div>
+</body>
+</html>
