@@ -31,6 +31,15 @@
       "window_start": "2026-07-20T17:01:12-04:00",
       "window_end": "2026-07-21T17:01:12-04:00"
     },
+    "carter@hedgineer.io": {
+      "target_user": "carter@hedgineer.io",
+      "engineer_slug": "carter",
+      "markdown_path": "reports/daily_selfreport/daily_selfreport_carter_2026-07-21.md",
+      "html_path": "reports/daily_selfreport/daily_selfreport_carter_2026-07-21.html",
+      "generated_at": "2026-07-21T21:06:31Z",
+      "window_start": "2026-07-20T21:06:31Z",
+      "window_end": "2026-07-21T21:06:31Z"
+    },
     "daniel@hedgineer.io": {
       "target_user": "daniel@hedgineer.io",
       "engineer_slug": "daniel",
