@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Team Report — 2026-07-22</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --border:#2d3644;
+    --text:#e6edf3; --muted:#9aa7b4; --accent:#7aa2f7; --green:#3fb950;
+    --amber:#d29922; --red:#f85149; --purple:#bc8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 22px 64px;}
+  h1{font-size:23px;margin:0 0 4px;letter-spacing:-.2px}
+  h2{font-size:16px;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);
+    margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--border)}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+  .scoreboard{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+  .stat{background:var(--panel);border:1px solid var(--border);border-radius:10px;
+    padding:10px 14px;min-width:120px}
+  .stat .n{font-size:20px;font-weight:700}
+  .stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 4px}
+  .chip{font-size:12px;padding:3px 9px;border-radius:20px;border:1px solid var(--border);
+    background:var(--panel2)}
+  .ok{color:var(--green);border-color:#1f4d2b}
+  .warn{color:var(--amber);border-color:#5a4611}
+  .bad{color:var(--red);border-color:#5c2321}
+  .note{background:var(--panel);border-left:3px solid var(--accent);border-radius:6px;
+    padding:11px 14px;color:var(--muted);font-size:13px;margin:14px 0}
+  ol.crit{list-style:none;counter-reset:c;padding:0;margin:0}
+  ol.crit li{counter-increment:c;background:var(--panel);border:1px solid var(--border);
+    border-radius:10px;padding:13px 15px 13px 46px;position:relative;margin-bottom:11px}
+  ol.crit li::before{content:counter(c);position:absolute;left:13px;top:13px;
+    width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;
+    font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+  ul{padding-left:20px;margin:8px 0}
+  li{margin:5px 0}
+  .eng b{color:var(--text)}
+  .tag{font-size:11px;color:var(--muted);border:1px solid var(--border);border-radius:4px;
+    padding:0 5px;margin-left:4px;white-space:nowrap}
+  .tag.miss{color:var(--amber);border-color:#5a4611}
+  code,.mono{background:var(--panel2);border:1px solid var(--border);border-radius:4px;
+    padding:1px 5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}
+  .quiet{color:var(--muted);font-style:italic;font-size:13px;margin-top:10px}
+  .foot{color:var(--muted);font-size:12px;margin-top:40px;border-top:1px solid var(--border);
+    padding-top:14px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Daily Team Report — 2026-07-22</h1>
+  <div class="sub">Async standup · ~10-min read · window <b>Tue 2026-07-21 ~09:00 ET → Wed 2026-07-22 09:00 ET</b> (~24h; not a Monday, no weekend cover)</div>
+
+  <div class="scoreboard">
+    <div class="stat"><div class="n">12<span style="font-size:13px;color:var(--muted)"> / 14</span></div><div class="l">Engineers w/ signal</div></div>
+    <div class="stat"><div class="n">~7</div><div class="l">Open / aging blockers</div></div>
+    <div class="stat"><div class="n">5</div><div class="l">Critical</div></div>
+    <div class="stat"><div class="n">9 / 14</div><div class="l">Self-reports present</div></div>
+  </div>
+
+  <div class="chips">
+    <span class="chip ok">Linear · OK</span>
+    <span class="chip ok">Slack · OK</span>
+    <span class="chip ok">Fireflies · OK</span>
+    <span class="chip bad">Repo/Drift · DEGRADED</span>
+    <span class="chip warn">Usage · SKIPPED</span>
+    <span class="chip warn">Self-reports · 9 of 14</span>
+  </div>
+
+  <div class="note">
+    Self-reports are context; raw Linear / Slack / Fireflies signal wins on status. Linear reflects
+    state as of this morning, so several Tue-17:00 self-reports understated work that landed overnight —
+    corrected below. Repo/Drift degraded: no #6 drift artifact today, <code>hedgineer-core</code>
+    unreachable, bizops is a reporting mirror — ship claims rest on Linear + Slack + attached-PR refs,
+    not repo diff. Usage SKIPPED: no usage-analytics connector, so idle-stripped active hours are
+    unavailable for everyone (a proxy, never a ranking). No client/fund data or PII.
+  </div>
+
+  <h2>Critical — discuss live (5)</h2>
+  <ol class="crit">
+    <li><b>Lucien / Ned — HT-198 "Urgent: full backup of Hedgineer-internal Postgres before rename ships" is still Backlog and ~2 business days overdue</b> (due 2026-07-20), owner never confirmed. Client-side (LMX) backup got done by Siddharth + Shreyas Tue night, but Hedgineer's <em>own</em> env backup — the point of HT-198 — is untouched while the WMA→Hedgineer cutover (HT-194 Phase 3) is in progress. Ned asked in-thread to confirm Lucien owns it; no explicit yes. <em>Decide owner + do it today.</em> <span class="mono">HT-198 · #client-luminarx</span></li>
+    <li><b>Lucien (+ Colson blocked) — staging auth/session cluster: what's fixed vs open, and align the JWT root cause.</b> <code>TRIAGE-67</code> MCP "missing authorization" — Lucien's fix didn't hold ("Same issue", Colson still blocked), still Backlog; <code>TRIAGE-69</code> recurring JWT logout — ticketed/In Progress but <b>root cause disputed</b> (Lucien: signing secret regenerates on boot; Omri: "we manually seed that secret"; Eli: "not related to deploys"); <code>PLATFRM-6324</code> HTTP 431 login — shipped Done overnight. MCP parity is in V1.0 GA scope. <em>Align root cause; confirm which are truly closed.</em></li>
+    <li><b>Alex + app team — V1.0 release sequencing: pipeline deploy vs app deploy + compatibility matrix, before Wed 7/23 EOD feature freeze.</b> V1.0 train: Internal Staging Fri 7/24 · Internal Prod Fri 7/31 · GA Thu 8/6. Standup put Alex on "coordinate pipeline and app deployment" — pipeline ships separately from the app; a dependency/compat matrix is needed to avoid version conflicts. <em>Sequence today; freeze is tomorrow.</em></li>
+    <li><b>Max Chirkov — no signal on any source since 2026-07-17 (~5 days), no OOO note, PLATFRM-6111 stuck In Review ~11 business days.</b> Linear shows "Offline"; nothing moved in-window; his self-report flagged the same gap. During launch crunch, <em>confirm OOO vs blocked, and whether PLATFRM-6111 waits on a reviewer or on Max.</em></li>
+    <li><b>Daniel / Carter — duplicate & naming-cleanup tickets need canonical owners before Wed 7/23 scope lock.</b> <code>TRIAGE-65</code> & <code>PLATFRM-6323</code> (both Daniel) overlap on install-doc/WAGS cleanup — Daniel flagged it; <code>TRIAGE-58</code> (Carter) is the sibling surface-rename. Plus 4 auto-created duplicate pairs unstarted: <code>TRIAGE-50/54</code> (agents view fails to render, High), <code>51/55</code>, <code>52/56</code>, <code>53/57</code>. <em>Close dupes / assign one owner each.</em></li>
+  </ol>
+
+  <h2>Per-engineer (did / doing / blocked)</h2>
+  <ul class="eng">
+    <li><b>Colson Xu</b><span class="tag miss">self-report: missing</span> — <b>did:</b> reported platform bugs (WAGS connector button, MCP auth → TRIAGE-67, personal-team visibility) + claimed/started PLATFRM-6306 (platform usage skill, High). <b>doing:</b> PLATFRM-6306, TRIAGE-59. <b>blocked:</b> can't use MCP on staging (TRIAGE-67).</li>
+    <li><b>Bohdan Kopcha</b><span class="tag">self-report: present</span> — <b>did:</b> shipped Skill Team Sharing follow-ups PLATFRM-6315/16/17/20/21 + 6318 (Teams filters) all Done overnight (self-report said 0 Done). <b>doing:</b> PLATFRM-6246, TRIAGE-5 (mobile), TRIAGE-66, PLATFRM-6310. <b>blocked:</b> none (~20 open, at soft cap).</li>
+    <li><b>Alex Sarakuz</b><span class="tag">self-report: present</span> — <b>did:</b> shipped RTW-1960 + RTW-1961 (KG exposure cards) Done this AM; RTW-1977/1619 earlier. <b>doing:</b> V1.0 pipeline-deploy coordination, iVol RTW-1956, RTW-1964/1965 ready-to-release, TRIAGE-50/51/54/55. <b>blocked:</b> TRIAGE-33 branding crash aging ~3 bd.</li>
+    <li><b>Carter Falkenberg</b><span class="tag">self-report: present</span> — <b>did:</b> closed <b>Urgent TRIAGE-31</b> + PLATFRM-6322/6314/6299/6311 (permissions sweep, Done overnight). <b>doing:</b> TRIAGE-58 (rename), connector-button fix. <b>blocked:</b> standing on-hold backlog only (7 items, 5–7 bd).</li>
+    <li><b>Eli Plutchok</b><span class="tag miss">self-report: missing</span> — <b>did:</b> shipped RTW-1940 (RTW FactSet MCP server → staging; PoC template). <b>doing:</b> RTW-1994 (compliance API), homepage real-data PLATFRM-6305, cost pipeline. <b>blocked:</b> RTW-2005 (Databricks MCP) blocked by Service Principal access.</li>
+    <li><b>Shreyas Aditya</b><span class="tag">self-report: present</span> — <b>did:</b> completed LMX WMA→Hedgineer migration (v0.4.1) with Siddharth + DB backup, cut v0.4.3, started TRIAGE-63. <b>doing:</b> LUM-102 (roll v0.4.3 to LMX), TRIAGE-64 (skill lineage). <b>blocked:</b> PLATFRM-6056 STALE (~13 bd).</li>
+    <li><b>Lucien Putnam</b><span class="tag">self-report: present</span> — <b>did:</b> shipped PLATFRM-6324 (431 login fix), ticketed/started TRIAGE-69 (JWT), MCP consolidation, LMX rename PR #114. <b>doing:</b> HT-194 Phase 3 cutover, TRIAGE-69, TRIAGE-53/57. <b>blocked/risk:</b> owns overdue Urgent HT-198 (unconfirmed) + TRIAGE-67 fix didn't hold.</li>
+    <li><b>Daniel Avila</b><span class="tag">self-report: present</span> — <b>did:</b> shipped 5 Stone Ridge deck tickets (HT-201/202/203/204/205) + MCP-endpoint cleanup. <b>doing:</b> HT-206 (Plan Mode, due today), install-doc dedup TRIAGE-65/PLATFRM-6323, TRIAGE-47/6174. <b>blocked:</b> TRIAGE-47/6174 waiting on Shreyas/Eli Databricks layer (~4–5 bd).</li>
+    <li><b>Omri Hurvitz</b><span class="tag miss">self-report: missing</span> — <b>did:</b> resolved RTW production incident (expired Azure secret → reran airflow, freshness restored) + JWT root-cause input. <b>doing:</b> internal prod env for V1.0, PLATFRM-6197 (version surfacing). <b>blocked:</b> none surfaced.</li>
+    <li><b>Siddharth Yadav</b><span class="tag miss">self-report: missing</span> — <b>did:</b> co-executed LMX WMA→Hedgineer deploy with Shreyas + PG backups. <b>doing:</b> LMX v0.4.3 rollout, review Lucien's PR #114, verify blob backup. <b>blocked:</b> none surfaced.</li>
+    <li><b>Klevin Doda</b><span class="tag miss">self-report: missing</span> — <b>did:</b> none Done in-window. <b>doing:</b> PLATFRM-6249 (Visible Alpha MCP) + PLATFRM-6250 (OneNote MCP), both In Review. <b>blocked:</b> Mon standup flagged needing Omri's help on VAMCP/OneNote (low confidence).</li>
+    <li><b>Bohdan Tsymbal</b><span class="tag">self-report: present</span> — <b>did:</b> none confirmed (silent standup participant). <b>doing:</b> Skill Detail tabs PLATFRM-6134/6135/6136/6137 (In Review), PLATFRM-6295. <b>blocked:</b> none. FYI: OOO Jul 27–31.</li>
+    <li><b>Max Chirkov</b><span class="tag">self-report: present</span> — <b>did:</b> nothing in-window (last activity 07-17). <b>doing:</b> PLATFRM-6111 (agent plan mode, In Review ~11 bd) + 5 unstarted. <b>blocked:</b> coverage gap — dark ~5 days, no OOO note.</li>
+    <li><b>Patrick Beljan</b><span class="tag">self-report: present</span> — <b>did:</b> shipped HT-195 (bizops rename) + PLATFRM-6267 (error-differentiation audit). <b>doing:</b> PLATFRM-6312 (local kind+ArgoCD harness, In Review), PLATFRM-6298 (observability pipeline). <b>blocked:</b> none.</li>
+  </ul>
+  <p class="quiet">No self-report file (5, raw-only): Colson, Eli, Omri, Siddharth, Klevin. · Silent this window: Max (no signal since 7/17); Bohdan Tsymbal (standup only). · AI-session active hours unavailable for all (Usage SKIPPED).</p>
+
+  <h2>Platform pulse (since Tue 2026-07-21 ~09:00 ET)</h2>
+  <ul>
+    <li><b>Organization management &amp; permissions</b> <span class="tag">Platform Launch · Org &amp; Entitlements</span> — strongest bucket: Carter closed Urgent TRIAGE-31 + PLATFRM-6322/6314/6299/6311. Ned flagged permissions "swirl" → wants a Company-vs-Team scope session.</li>
+    <li><b>Skills</b> <span class="tag">Skill Team Sharing</span> — Bohdan K shipped the 6-item sharing batch (PLATFRM-6315/16/17/18/20/21); Colson started PLATFRM-6306; skill-lineage (TRIAGE-64) + required-descriptions (TRIAGE-59) queued.</li>
+    <li><b>Infrastructure &amp; integrations</b> <span class="tag">staging auth + MCP consolidation</span> — Lucien shipped PLATFRM-6324 + ticketed TRIAGE-69; Daniel/Lucien trimmed ~10 MCP URLs to the platform MCP; Omri resolved the RTW Azure-secret incident; Klevin's Visible Alpha + OneNote connectors in review.</li>
+    <li><b>Client Deployments</b> <span class="tag">WMA→Hedgineer cutover</span> — Shreyas + Siddharth migrated LMX to v0.4.1, rolling v0.4.3; Patrick shipped HT-195 + PLATFRM-6312; Lucien's LMX PR #114 in review. TRIAGE-71 raised (deploy process manual/error-prone).</li>
+    <li><b>Observability</b> — Eli deployed RTW FactSet MCP (PoC template); LMX observability v0.3.0 deployed; Daniel's Codex log-collector fix in (waiting on Databricks layer); cost dashboard under-report (PLATFRM-6080) still stale.</li>
+    <li><b>Other (RTW analytics / HT training)</b> — Alex's KG exposure cards Done (RTW-1960/61); Daniel shipped 5 Stone Ridge deck tickets; RTW daily-positions fixes (Chaitanya, non-roster).</li>
+  </ul>
+  <p class="quiet">Quiet with ownership: <b>Homepage</b> — Home-v3 real-data wiring (PLATFRM-6305 Eli Todo; PLATFRM-6279 Max, who is dark) had no landed movement while in V1.0 WebApp scope. <b>Agents</b> — ships feature-flagged OFF for GA; Max's agent work stalled.</p>
+
+  <h2>Blockers (deduped; business-day age)</h2>
+  <ul>
+    <li><b>HT-198</b> — Urgent Hedgineer-internal Postgres backup — Lucien (owner unconfirmed) — Backlog, <b>~2 bd overdue</b> (due 07-20), no confirmed path. <span class="tag bad">Critical #1</span></li>
+    <li><b>TRIAGE-67</b> — MCP "missing authorization" on staging — Lucien — ~1 bd, fix failed — blocks Colson. <span class="tag bad">Critical #2</span></li>
+    <li><b>TRIAGE-47 / PLATFRM-6174</b> — Codex→observability: Daniel's fix in, waiting on Shreyas/Eli Databricks layer — ~4–5 bd.</li>
+    <li><b>RTW-2005</b> — Databricks MCP — Eli — Todo, blocked by Service Principal access.</li>
+    <li><b>PLATFRM-6056</b> — Observability-pipeline bundle pin — Shreyas — In Progress <b>~13 bd (STALE)</b>.</li>
+    <li><b>PLATFRM-6111</b> — Agent plan mode — Max — In Review <b>~11 bd</b>. <span class="tag bad">Critical #4</span></li>
+    <li><b>TRIAGE-33</b> — Branding endpoint crash (client-facing) — Alex — In Review ~3 bd, no PR visible.</li>
+    <li><i>Standing/parked (unchanged):</i> Carter's 7 On-Hold/Blocked items (PLATFRM-6159/6160/6128/6115/6117/6047, HT-188), 5–7 bd.</li>
+    <li><i>Resolved in window:</i> RTW production Azure-secret incident (Omri).</li>
+  </ul>
+
+  <h2>Action items (Fireflies — Tue Eng Stand Up)</h2>
+  <ul>
+    <li>Alex — finalize LuminarX URL update + coordinate pipeline &amp; app deploy — <b>still open</b>.</li>
+    <li>Omri — continue standing up internal production environment — <b>still open</b>.</li>
+    <li>Manaswi (non-roster) — rerun airflow tasks (RTW production) — <b>resolved</b>.</li>
+    <li>Ned — clarity on new MCP state — <b>substantially done</b> (MCP-URL consolidation executed in Slack).</li>
+    <li>"NYC Big Conf Room" — send client release-announcement email — <b>open</b>.</li>
+  </ul>
+
+  <h2>FYI / read-only (not for live discussion)</h2>
+  <ul>
+    <li><b>TRIAGE-71</b> — client deploy process manual/error-prone, "unclear which version is live" (Jeffrey/Adam) → Leadership Pre-Read, not today's room.</li>
+    <li><b>New TRIAGE-8 (.io/.ai) instance</b> — Lucien double-listed lucien@hedgineer.io / .ai on Fireflies; merged to <code>.io</code>. Flag for roster maintainers.</li>
+    <li><b>Bohdan Kopcha ~20 open issues</b> (soft cap) — watch before assigning more.</li>
+    <li><b>Bohdan Tsymbal OOO Jul 27–31</b> — planning visibility.</li>
+    <li>Repo/Drift degraded — code-truth (commits/PRs) not independently verified this run.</li>
+  </ul>
+
+  <div class="foot">
+    Generated 2026-07-22 · America/New_York · daily-team-report (#14). Private DM to Ned only —
+    self-reports are context, raw signals win on status truth; active-time is a proxy, not a ranking.
+    Sources: Linear, Slack (public), Fireflies. Repo/Drift degraded; Usage skipped.
+  </div>
+</div>
+</body>
+</html>
